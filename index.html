@@ -2,42 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moyu Cube Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MOYU Rubix Cube</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-   <nav>
-    <a>HOME</a>
-    <a>ABOUT</a>
-    <a>SHOP</a>
-    <a>BLOG</a>
-    <a>CONTACT</a>
-  </nav>
-  </header>
- 
-  <img class="rubix-cube" src=""  alr=""/>
+  <div class="nav-wrapper">
+    <header>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">SHOP</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  
 
 
-  <h1>MOYU RUBIX CUBE</h1>
-
-<div class="info-box">
-  <p>
-    Precision. Performance. Perfection.<br>
-    Experience the next generation of speedcubing with MOYU — engineered for elite performance and built to last.
-  </p>
-  <ul>
-    <li>Smooth, Stable Rotation &ndash; Advanced mechanism ensures effortless turning and minimal friction</li>
-    <li>Magnetic Positioning System &ndash; Enhanced control and accuracy for competitive solving</li>
-    <li>Durable Build Quality &ndash; Premium materials designed for long-term use</li>
-    <li>Ergonomic Design &ndash; Comfortable grip for extended practice sessions</li>
-  </ul>
+  <main class="container">
+    <section class="left-column">
+      <div class="fashion-text"><span class="z">Z</span><span class="y">Y</span><span class="r">R</span><span class="e">E</span><span class="x">X</span></div>
+      <!-- <div class="leaf-overlay"></div> -->
+      <div class="image-gallery">
+  <img src="images/rubixiago.jpg" alt="MOYU Rubix Cube">
 </div>
+    </section>
 
-  <button class="shop-now-button">
-    SHOP NOW
-  </button>
+    <section class="right-column">
+      <div class="content-block">
+      <h1>ZYREX RUBIX CUBE</h1>
+      <p class="tagline">Precision. Performance. Perfection.</p>
+      <p class="description">Experience the next generation of speedcubing with MOYU — engineered for elite performance and built to last.</p>
+      <ul class="features-list">
+        <li>Smooth, Stable Rotation — Advanced mechanism ensures effortless turning and minimal friction</li>
+        <li>Magnetic Positioning System — Enhanced control and accuracy for competitive solving</li>
+        <li>Durable Build Quality — Premium materials designed for long-term use</li>
+        <li>Ergonomic Design — Comfortable grip for extended practice sessions</li>
+      </ul>
+    </div>
+      <a href="#" class="shop-button">SHOP NOW</a>
+    </section>
+  </main>
 
- </body>
+
+  <script>
+  function toggleMenu() {
+    const nav = document.querySelector("nav ul");
+    nav.classList.toggle("show-menu");
+  }
+</script>
+
+</body>
 </html>
