@@ -1,4 +1,164 @@
 body {
-  background-color: black;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+  color: #333;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  gap: 0; /* No space between rows */
+}
+.middle-row,
+.bottom-row {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.row {
+  width: 100%; /* Makes each row span full width */
+  max-width: 1000px; /* Limits width for better layout */
+  padding: 40px 20px; /* Adds space inside each row */
+}
+
+.top-row {
+  background-image: url('/images/dishes-mediterranean-cuisine.jpg'); /* place your image here */
+  background-size: cover;
+  background-position: center;
   color: white;
 }
+
+.top-row h1 {
+  font-size: 3em;
+  margin-bottom: 0.3em;
+  margin-bottom: 25px;
+  font-family: 'Hammersmith One', sans-serif;
+  letter-spacing: 6px;
+}
+
+.top-row p {
+  font-size: 1.5em;
+  font-family: 'Solway', serif;
+  margin-bottom: 1em;
+  padding-bottom: 85px;
+}
+
+.top-row button {
+  font-weight: 600;
+  padding: 10px 26px;
+  font-size: 1.0em;
+  background-color: #e3b04b;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-bottom: 70px;
+  margin-top: 30px;
+}
+
+.middle-row {
+  background-color: #f1f1e5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+.middle-row h2 {
+  font-size: 30px;
+  font-weight: normal;
+  font-family: serif;
+  margin-bottom: 0.5em;
+}
+
+.middle-row ul {
+  list-style: none;
+  padding: 0;
+}
+
+.middle-row li {
+  font-weight: 500;
+  font-size: 1.4em;
+  font-family:  'Hammersmith One', sans-serif;
+  margin-bottom: 0.5em;
+  color: black;
+}
+.bottom-row {
+  background-color: #000;
+  color: white;
+  border-radius: 10px;
+}
+.menu-header {
+  display: flex;                  /* Enables horizontal layout */
+  justify-content: space-between; /* Pushes h2 left, button right */
+  align-items: center;           /* Vertically centers both */
+  margin-bottom: 30px;           /* Space below the header row */
+}
+
+.menu-header h2 {
+  font-family: 'Solway', serif;
+  font-weight: 400;
+  font-size: 2em;
+  margin: 0;
+  margin-left: 25px;
+}
+
+.menu-header button {
+  padding: 10px 27px;
+  font-size: 0.9em;
+  font-weight: 600;
+  background-color: #e3b04b;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  margin-right: 28px;
+  margin-top: 20px;
+}
+/* .bottom-row h2 {
+  font-family: 'Solway', serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: flex-start;
+  margin: -15px 0 10px 25px;
+} */
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.category {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+
+.category img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+.category p {
+  margin-top: 10px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 14px;
+}
+/* .bottom-row button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #e3b04b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+} */
+
+
+
+
