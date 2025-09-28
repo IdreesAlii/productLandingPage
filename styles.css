@@ -6,6 +6,70 @@ body {
 
 }
 
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+ /* Increase from 80px */
+/* .logo-container img {
+  max-height: 100px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+} */
+
+
+.logo-container img {
+  height: 100px; /* or even 120px if you want it bigger */
+  width: auto;
+  display: block;
+  object-fit: contain;
+  background-color: red;
+
+}
+
+
+
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #e3b04b;
+}
+
+
 .container {
   display: flex;
   flex-direction: column;
@@ -62,7 +126,7 @@ body {
 }
 
 .middle-row {
-  background-color: #f1f1e5;
+  background-color: #f5f5ef;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
 }
@@ -149,6 +213,36 @@ body {
   font-family: 'Hammersmith One', sans-serif;
   font-size: 14px;
 }
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  display: block;
+  filter: brightness(70%); /* adds the grayish tint */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.0rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Hammersmith One', sans-serif;
+  letter-spacing: 1.5px;
+  padding: 0 1rem;
+}
+
+
+
 /* .bottom-row button {
   padding: 10px 20px;
   font-size: 1em;
@@ -160,5 +254,19 @@ body {
 } */
 
 
+
+@media (max-width: 600px) {
+  .logo-container img {
+    height: 60px;
+  }
+
+  .main-nav ul {
+    gap: 15px;
+  }
+
+  .main-nav a {
+    font-size: 0.9rem;
+  }
+}
 
 
