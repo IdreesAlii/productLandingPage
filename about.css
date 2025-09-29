@@ -74,6 +74,9 @@ body {
 .frenchio {
   font-family: 'Solway', sans-serif;
   font-size: 3rem;
+  margin-left: 90px;
+  margin-top: 40px;
+  line-height: 1.1;
 }
 .p-text {
   font-family: 'HK Grotesk', sans-serif;
@@ -81,7 +84,8 @@ body {
   max-width: 500px;               /* Controls line length */
   margin-top: 7px;      
   line-height: 1.6;
-  font-size: 18px;               /* Improves readability */
+  font-size: 18px;   
+  margin-left: 90px;            /* Improves readability */
 }
 
 
@@ -91,9 +95,10 @@ body {
   padding: 18px 47px;
   border: none;
   border-radius: 22px;
-  margin-left: 290px;
+  margin-left: 340px;
   transition: 0.3s ease;
   cursor: pointer;
+  font-weight: bold;
 }
 .book-button:hover {
   background-color: #333;
