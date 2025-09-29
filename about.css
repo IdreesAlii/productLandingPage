@@ -1,0 +1,198 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+.top-row {
+  display: flex;
+  height: 50%;
+  background-color: #f5f5e5;
+  width: 100%;
+}
+
+.left-column,
+.right-column {
+  flex: 1;
+  height: 100%;
+  /* border: 1px solid #ccc; */
+}
+
+.left-column {
+  width: 40%;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-items: center; /* instead of flex-start */
+  gap: 20px;
+}
+
+.left-column img:first-child {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin-top: -130px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-right: 40px;
+  margin-left: 120px;
+}
+
+.left-column img:last-child {
+  width: 100%;
+  max-width: 350px;
+  margin-right: 90px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 40px; /* This creates the staggered effect */
+  transform: translateY(10px);
+}
+
+
+.right-column {
+  flex: 1;
+  height: 100%;
+  padding: 40px;
+  /* You can style this later */
+}
+
+.frenchio {
+  font-family: 'Solway', sans-serif;
+  font-size: 3rem;
+}
+.p-text {
+  font-family: 'HK Grotesk', sans-serif;
+  /* padding: 20px;                  */
+  max-width: 500px;               /* Controls line length */
+  margin-top: 7px;      
+  line-height: 1.6;
+  font-size: 18px;               /* Improves readability */
+}
+
+
+.book-button {
+  background-color: black;
+  color: white;
+  padding: 18px 47px;
+  border: none;
+  border-radius: 22px;
+  margin-left: 290px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.book-button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.book-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: #555;
+}
+
+.bottom-row  {
+  color:white;
+  height: 50%;
+  width: 100%;
+  background-color: black;
+}
+
+
+.love-text {
+  font-family: 'Solway', serif;
+  font-size: 3.8rem;
+  text-align: center;
+  padding-top: 60px;
+  margin-bottom: 60px;
+}
+
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.category {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.category p {
+  margin-top: 10px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 16px;
+  
+}
+
+.firstio,
+.secondio,
+.thirdio {
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 16px;
+}
+
+
+.first-text {
+  font-family: 'HK Grotesk', sans-serif;
+  /* padding: 20px;                  */
+  max-width: 300px;               /* Controls line length */
+  margin-top: 7px;      
+  line-height: 1.6;
+  font-size: 18px; 
+  margin-left: 140px;
+}
+.firstio {
+   margin-left: 140px;
+   margin-bottom: 15px;
+
+}
+.second-text {
+  font-family: 'HK Grotesk', sans-serif;
+  /* padding: 20px;                  */
+  max-width: 300px;               /* Controls line length */
+  margin-top: 7px;      
+  line-height: 1.6;
+  font-size: 18px; 
+   margin-left:130px;
+}
+.secondio {
+  margin-bottom: 15px;
+   margin-left: 130px;
+
+}
+.third-text {
+  font-family: 'HK Grotesk', sans-serif;
+  /* padding: 20px;                  */
+  max-width: 300px;               /* Controls line length */
+  margin-top: 7px;      
+  line-height: 1.6;
+  font-size: 18px; 
+   margin-left:100px;
+}
+.thirdio {
+  margin-bottom: 15px;
+  margin-left:100px;
+
+}
+
