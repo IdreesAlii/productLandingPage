@@ -122,9 +122,12 @@ body {
   margin-bottom: 70px;
   margin-top: 30px;
 }
+.top-row button:hover {
+  background-color: #d4a03a; /* Darker shade on hover */
+}
 
 .middle-row {
-  background-color: #f5f5ef;
+  background-color: #f5f5e5;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
 }
@@ -167,16 +170,22 @@ body {
   margin-left: 25px;
 }
 
-.menu-header button {
+.menu-header a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Hammersmith One', sans-serif;
   padding: 10px 27px;
   font-size: 0.9em;
-  font-weight: 600;
+  font-weight: 500;
   background-color: #e3b04b;
   border: none;
   border-radius: 17px;
   cursor: pointer;
   margin-right: 28px;
   margin-top: 20px;
+}
+.menu-header button:hover {
+  background-color: #d4a03a; /* Darker shade on hover */
 }
 /* .bottom-row h2 {
   font-family: 'Solway', serif;
