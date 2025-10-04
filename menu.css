@@ -1,18 +1,26 @@
 html, body {
   height: 100%;
   margin: 0;
+}
+
+
+
+body {
   background-color: black;
+  padding: 0;
+  margin: 0;
   color: white;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  height: 2250px;
+  height: 2500px;
   max-width: 1000px;
   margin: 0 auto;
   background-color: white;
   border-radius: 8px;
+
 }
 
 .top-row,
@@ -23,147 +31,168 @@ html, body {
   justify-content: center;
   align-items: center;
   width: 100%;
+
 }
 
 .top-row {
+
+  background-color: rgb(10, 57, 73);
   position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .line {
   position: absolute;
-  top: 30px;
-  width: 280px;
-  border-top: 2px solid rgb(161, 149, 149);
-  margin-top: 30px;
+  top: 55px;
+  width: 35%;
+  border: 2px solid rgb(199, 199, 199);
 }
 
-.top-column {
-  text-align: center;
-  font-family: 'Solway', serif;
-  padding-top: 40px;
-}
-
-.top-column h1 {
-  font-family: 'Hammersmith One', sans-serif;
-  font-size: 2.9rem;
-  font-weight: 500;
-  margin-top: 50px;
-}
-
-.top-column p {
-  font-family: sans-serif;
-  font-size: 1.2rem;
-  margin-top: -10px;
-  margin-bottom: 100px;
-  font-weight: 300;
-}
-
-.bottom-column {
-  margin-top: 38px;
-  text-align: center;
-  padding-bottom: 40px;
-}
-
-.bottom-column h3 {
-  font-family: 'Hammersmith One', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-top: -25px;
-  margin-bottom: 50px;
-}
-
-.item {
-  font-family: sans-serif;
+.menu-title {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-  font-family: 'Solway', serif;
-  font-size: 1.1rem;
-  color: white;
-  margin-top: 20px;
-  width: 100%;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  width: 474px;
+  margin-bottom: 85px;
+}
+.menu-title h1 {
+  font-family: 'Hammersmith One', sans-serif;
+  position: absolute;
+  top: 84px;
+  font-size: 45px;
+}
+.text-box {
+  font-family: sans-serif;
+  position: absolute;
+  color: #fff; /* White text */
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 580px;
+  /* padding: 20px; */
+  line-height: 1.6;
+  top: 180px;
 }
 
-.menu-line {
+.appetizers {
+  font-family: 'Hammersmith One', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 225px;
+}
+
+.menu-item {
   font-family: sans-serif;
+  font-size: 1.2rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 12px 0;
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
-  width: 100%;
-  column-gap: 250px;
-}
-
-.menu-line span {
+  width: 700px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #444;
+  margin-top: 25px;
   text-transform: uppercase;
-  font-weight: 500;
-  white-space: nowrap;
-  font-size: 1.1rem;
+  font-weight: bold;
 }
 
-.menu-line span:last-child {
-  margin-left: 140px;
+.item-name {
+  text-align: left;
 }
+
+.item-price {
+  text-align: right;
+}
+
+
+
+
+
 
 
 .middle-row {
-  display: flex;
+
+  background-color: rgb(249, 157, 157);
+  position: relative;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 60px 20px;
-  background-color: black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-.middle-row h3 {
+
+.items1 {
+  margin-top: -261px;
+}
+
+.mains {
   font-family: 'Hammersmith One', sans-serif;
-  font-size: 1.4rem;
   font-weight: 500;
-  margin-bottom: 30px;
-  text-align: center;
+  font-size: 1.5rem;
+  position: absolute;
+  
+  top: 20px;
+  left: 46%;
 }
 
-.item {
+.middle-bottom {
+  position: relative;
+}
+
+.desserts {
+  font-family: 'Hammersmith One', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-  font-family: 'Solway', serif;
-  font-size: 1.1rem;
-  color: white;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto 60px auto;
+  position: relative;
+  top: 77px;
+  left: 41.5%;
 }
 
-.menu-line {
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  align-items: center;
-  column-gap: 100px;
-  padding: 12px 0;
-}
 
-.menu-line span {
+.menu-item1 {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #444;
   text-transform: uppercase;
-  font-weight: 500;
-  white-space: nowrap;
-  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 95px;
+
 }
+
+.item-name1 {
+  text-align: left;
+}
+
+.item-price1 {
+  text-align: right;
+}
+.item-price2 {
+  text-align: right;
+
+}
+.menu-item2 {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #444;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+
 
 
 
 .bottom-row {
-  top: 20px;
-  background-color: #f5f5e5;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
+
+  background-color: rgb(177, 255, 177);
+
 }
