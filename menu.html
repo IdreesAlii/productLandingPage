@@ -11,6 +11,31 @@
   </head>
 
   <body>
+    <header class="navbar">
+      <div class="nav-logo">LA LUNE</div>
+      <button class="menu-toggle" id="menuToggle">
+        ☰
+      </button>
+    </header>
+    <nav class="sidebar" id="sidebarMenu">
+      <ul>
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/menu.html">Menu</a>
+        </li>
+        <li>
+          <a href="/about.html">About</a>
+        </li>
+        <li>
+          <a href="/contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+
+
     <div class="container">
     <div class="top-row">
       <span class="line"></span>
@@ -77,11 +102,62 @@
             <span class="item-price1">$9</span>
             <span class="item-price2">$16</span>
           </div>
+          <div class="menu-item">
+            <span class="item-name1">sad</span>
+            <span class="item-price1">$9</span>
+            <span class="item-price2">$16</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name1">sad</span>
+            <span class="item-price1">$9</span>
+            <span class="item-price2">$16</span>
+          </div>
         </div>
       </div>
     </div>
-    <div class="bottom-row"></div>
+    <div class="bottom-row">
+      <div class="drinks-section">
+        <h3>DRINKS</h3>
+        <div class="drinks-items">
+          <div class="menu-item">
+            <span class="item-name">VIN DU JOUR</span>
+            <span class="item-price">$10 PER GLASS | $48 PER BOTTLE</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">FRENCH LONG COFFEE</span>
+            <span class="item-price">$10</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">SPARKLING WATER</span>
+            <span class="item-price">$8</span>
+          </div>
+        </div>
+      </div>
+      <div class="image">
+        <img class="pizza" src="/images/pizza for website.jpg" />
+      </div>
     </div>
+
+    </div>
+    <script>
+      const menuToggle = document.getElementById('menuToggle');
+      const sidebar = document.getElementById('sidebarMenu');
+
+      menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+      });
+
+      // Close sidebar when clicking outside
+      document.addEventListener('click', (e) => {
+        if(!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+          sidebar.classList.remove('active');
+          document.body.classList.remove('menu-open');
+        }
+      })
+
+
+    </script>
   </body>
 
 </html>

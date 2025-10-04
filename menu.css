@@ -1,47 +1,38 @@
 html, body {
   height: 100%;
   margin: 0;
+  padding: 0;
 }
-
-
 
 body {
   background-color: black;
-  padding: 0;
-  margin: 0;
   color: white;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  height: 2500px;
   max-width: 1000px;
   margin: 0 auto;
   background-color: white;
-  border-radius: 8px;
-
+  /* border-radius: 8px; */
+  overflow: hidden; /* ✅ prevents overlapping overflow from any section */
 }
 
-.top-row,
-.middle-row,
-.bottom-row {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 
-}
 
+
+/* ---------- TOP SECTION ---------- */
 .top-row {
-
-  background-color: rgb(10, 57, 73);
-  position: relative;
+  background-color: black;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
+  text-align: center;
+  position: relative;
+  padding: 100px 20px 160px 20px; 
+  /* ✅ Added padding instead of absolute positions.
+     Fixed spacing to naturally separate top from next section. */
 }
 
 .line {
@@ -52,35 +43,30 @@ body {
 }
 
 .menu-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 474px;
-  margin-bottom: 85px;
+  margin-bottom: 40px; /* ✅ replaced hardcoded bottom margin spacing */
 }
+
 .menu-title h1 {
   font-family: 'Hammersmith One', sans-serif;
-  position: absolute;
-  top: 84px;
   font-size: 45px;
+  margin: 0 0 20px 0; /* ✅ removed absolute top, used normal flow */
 }
+
 .text-box {
   font-family: sans-serif;
-  position: absolute;
-  color: #fff; /* White text */
+  color: #fff;
   font-size: 1.2rem;
-  text-align: center;
   max-width: 580px;
-  /* padding: 20px; */
   line-height: 1.6;
-  top: 180px;
+  margin: 0 auto 60px auto; 
+  /* ✅ previously positioned absolutely, now centered naturally */
 }
 
 .appetizers {
   font-family: 'Hammersmith One', sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
-  margin-top: 225px;
+  margin: 60px 0 20px 0; /* ✅ spacing adjusted instead of “top:225px” */
 }
 
 .menu-item {
@@ -89,65 +75,49 @@ body {
   display: flex;
   justify-content: space-between;
   width: 700px;
+  max-width: 90%;
   padding: 10px 20px;
-  border-bottom: 1px solid #444;
-  margin-top: 25px;
+  /* border-bottom: 1px solid #444; */
   text-transform: uppercase;
   font-weight: bold;
+  color: white;
 }
 
-.item-name {
-  text-align: left;
-}
-
-.item-price {
-  text-align: right;
-}
-
-
-
-
-
-
-
+/* ---------- MIDDLE SECTION ---------- */
 .middle-row {
-
-  background-color: rgb(249, 157, 157);
-  position: relative;
+  background-color: black;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-}
-
-
-.items1 {
-  margin-top: -261px;
+  text-align: center;
+  padding: 100px 20px; 
+  /* ✅ replaced negative margins & absolute positioning with natural spacing */
 }
 
 .mains {
   font-family: 'Hammersmith One', sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
-  position: absolute;
-  
-  top: 20px;
-  left: 46%;
+  margin-bottom: 40px; /* ✅ natural gap below heading */
+}
+
+.items1 {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* ✅ replaced manual margin-top per item */
 }
 
 .middle-bottom {
-  position: relative;
+  margin-top: 100px; /* ✅ ensures desserts section doesn’t overlap mains */
 }
 
 .desserts {
   font-family: 'Hammersmith One', sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
-  display: flex;
-  position: relative;
-  top: 77px;
-  left: 41.5%;
+  margin-bottom: 30px;
+  /* ✅ removed absolute top & left alignment — now naturally stacked */
 }
-
 
 .menu-item1 {
   font-family: sans-serif;
@@ -155,44 +125,237 @@ body {
   display: flex;
   justify-content: space-between;
   width: 700px;
+  max-width: 90%;
   padding: 10px 20px;
-  border-bottom: 1px solid #444;
+  /* border-bottom: 1px solid #444; */
   text-transform: uppercase;
   font-weight: bold;
-  margin-top: 95px;
-
 }
 
-.item-name1 {
-  text-align: left;
+/* ---------- BOTTOM SECTION ---------- */
+.bottom-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  /* ✅ left intact — this section was fine visually */
 }
 
-.item-price1 {
-  text-align: right;
+.drinks-section {
+  margin-bottom: 50px;
 }
-.item-price2 {
-  text-align: right;
 
+.drinks-section h3 {
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
 }
-.menu-item2 {
-  font-family: sans-serif;
-  font-size: 1.2rem;
+
+.drinks-items {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.drinks-items .menu-item {
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
+  color: white;
+  /* ✅ slight transparency line fix for better contrast on black bg */
+}
+
+.image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pizza {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  /* ✅ no changes here — layout and image scaling are fine */
+}
+
+
+/* --- Tablet Screens --- */
+@media (max-width: 992px) {
+  .menu-title h1 {
+    font-size: 36px; /* smaller heading */
+  }
+
+  .text-box {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .menu-item,
+  .menu-item1 {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .bottom-row {
+    padding: 60px 20px;
+  }
+
+  .pizza {
+    max-width: 500px;
+  }
+}
+
+/* --- Mobile Screens --- */
+@media (max-width: 600px) {
+  .menu-title h1 {
+    font-size: 28px;
+  }
+
+  .text-box {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .appetizers,
+  .mains,
+  .desserts {
+    font-size: 1.2rem;
+  }
+
+  .menu-item,
+  .menu-item1 {
+    flex-direction: column; /* ✅ Stack name & price vertically */
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .menu-item span,
+  .menu-item1 span {
+    display: block;
+  }
+
+  .bottom-row {
+    padding: 50px 15px;
+  }
+
+  .pizza {
+    max-width: 350px;
+  }
+
+  .drinks-section h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/* --- Very Small Devices --- */
+@media (max-width: 400px) {
+  .menu-title h1 {
+    font-size: 24px;
+  }
+
+  .text-box {
+    font-size: 0.9rem;
+  }
+
+  .menu-item,
+  .menu-item1 {
+    font-size: 0.9rem;
+  }
+
+  .pizza {
+    max-width: 280px;
+  }
+}
+
+.navbar {
+  background-color: #000;
+  color: white;
   display: flex;
   justify-content: space-between;
-  width: 700px;
-  padding: 10px 20px;
-  border-bottom: 1px solid #444;
-  text-transform: uppercase;
-  font-weight: bold;
+  align-items: center;
+  padding: 15px 25px;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+
+.nav-logo {
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -270px;
+  width: 260px;
+  height: 100%;
+  background-color: #111;
+  color: white;
+  padding-top: 60px;
+  transition: left 0.3s ease-in-out;
+  z-index: 999;
+
+}
+
+.sidebar-ul {
+  list-style-type: none;
+  padding:0;
+  margin: 0;
+
+}
+
+.sidebar li {
+  margin: 25px 0;
+  text-align: center;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+}
+
+.sidebar a:hover {
+  color: #ccc;
+}
+
+.sidebar.active {
+  left: 0;
+}
+body.menu-open::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
 }
 
 
-
-
-
-
-.bottom-row {
-
-  background-color: rgb(177, 255, 177);
-
-}
