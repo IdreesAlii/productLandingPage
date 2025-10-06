@@ -227,6 +227,7 @@ body {
 .image-wrapper:hover img {
   transform: scale(1.05); /* slight zoom-in */
   filter: brightness(85%); /* make it a bit lighter */
+  cursor: pointer; /* indicate interactivity */
 }
 
 
