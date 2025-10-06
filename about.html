@@ -1,94 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - LA LUNE FRENCH BISTRO</title>
-    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Solway:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="about.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="top-row">
-        <div class="left-column">
-          <img src="/images/baked-brownies.jpg" alt="bakes brownies">
-          <img src="/images/pasta-dish.jpg" alt="pasta dish">
-        </div>
-        <div class="right-column">
-          <p class="frenchio">FRENCH <br>
-          CONNECTION</p>
-          <div class="p-text">
-            La Lune French Bistro was born from a love of all things Paris. Our founder and chef Ingrid Correa spent three amazing years in the City of Love, training under the industry's best. She brought home everything she learned—the flavors, the feelings, the family-style cafe—so that you can get a taste of Paris, too.
-          </div>
-          <button class="book-button">Book now</button>
-        </div>
-      </div>
-      <div class="bottom-row">
-        <p class="love-text">Love for La Lune</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - LA LUNE FRENCH BISTRO</title>
 
-        <div class="categories">
-        <div class="category">
-          <div class="image-wrapper">
-            <p class="firstio">TRANSPORTED TO PARIS</p>
-            <div class="first-text">
-              One bite and I felt like I was back in France. Chef Ingrid and her team have outdone themselves!
-              <br>
-              <br>
-              - Teddy
-            </div>
-          </div>
-        </div>
-        <div class="category">
-          <div class="image-wrapper">
-            <p class="secondio">LOVELY BISTRO</p>
-            <div class="second-text">
-              The ambience was great - and the food even better! Simple recipes done well, with top-notch ingredients. Will be back!
-              <br>
-              <br>
-              - Dani
-            </div>
-          </div>
-        </div>
-        <div class="category">
-          <div class="image-wrapper">
-            <p class="thirdio">TRULY A TREAT</p>
-            <div class="third-text">
-              Eating here made me miss Paris so much. What a treat! I will be bringing my client meetings here. 
-              <br>
-              <br>
-              - Carly
-            </div>
-          </div>
-        </div>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Solway:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+  <div class="container">
+    <!-- NAVIGATION -->
+    <header class="navbar">
+      <div class="nav-logo">LA LUNE</div>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </header>
+
+    <nav class="sidebar" id="sidebarMenu">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/menu.html">Menu</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- TOP SECTION -->
+    <section class="top-row">
+      <div class="left-column">
+        <img src="/images/baked-brownies.jpg" alt="Baked brownies">
+        <img src="/images/pasta-dish.jpg" alt="Pasta dish">
       </div>
 
-        
+      <div class="right-column">
+        <p class="frenchio">FRENCH <br> CONNECTION</p>
+        <p class="p-text">
+          La Lune French Bistro was born from a love of all things Paris. Our founder and chef Ingrid Correa spent three amazing years in the City of Love, training under the industry's best. She brought home everything she learned—the flavors, the feelings, the family-style cafe—so that you can get a taste of Paris, too.
+        </p>
+        <button class="book-button">Book Now</button>
       </div>
-    </div>
+    </section>
 
-  </body>
+    <!-- BOTTOM SECTION -->
+    <section class="bottom-row">
+      <h2 class="love-text">Love for La Lune</h2>
 
+      <div class="categories">
+        <div class="category">
+          <p class="review-title">TRANSPORTED TO PARIS</p>
+          <p class="review-text">
+            One bite and I felt like I was back in France. Chef Ingrid and her team have outdone themselves!
+            <br><br>– Teddy
+          </p>
+        </div>
+
+        <div class="category">
+          <p class="review-title">LOVELY BISTRO</p>
+          <p class="review-text">
+            The ambience was great – and the food even better! Simple recipes done well, with top-notch ingredients. Will be back!
+            <br><br>– Dani
+          </p>
+        </div>
+
+        <div class="category">
+          <p class="review-title">TRULY A TREAT</p>
+          <p class="review-text">
+            Eating here made me miss Paris so much. What a treat! I will be bringing my client meetings here.
+            <br><br>– Carly
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebarMenu');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+      document.body.classList.toggle('menu-open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+        sidebar.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      }
+    });
+  </script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

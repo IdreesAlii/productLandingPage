@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu-LA LUNE FRENCH BISTRO </title>
+    <link rel="stylesheet" href="menu.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Solway:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="nav-logo">LA LUNE</div>
+      <button class="menu-toggle" id="menuToggle">
+        ☰
+      </button>
+    </header>
+    <nav class="sidebar" id="sidebarMenu">
+      <ul>
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/menu.html">Menu</a>
+        </li>
+        <li>
+          <a href="/about.html">About</a>
+        </li>
+        <li>
+          <a href="/contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+
+
+    <div class="container">
+    <div class="top-row">
+      <span class="line"></span>
+      <div class="menu-title">
+        <h1>MENU</h1>
+        <div class="text-box">
+        <p>
+          Paris is a melting pot, as our food can attest. Take a bite and savor la vie délicieuse!
+        </p>
+        </div>
+      </div>              
+      <h3 class="appetizers">APPETIZERS</h3>
+       <div class="items">
+        <div class="menu-item">
+          <span class="item-name">ONION SOUP</span>
+          <span class="item-price">$9</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Warm goat cheese salad</span>
+          <span class="item-price">$10</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Tartare de salmon</span>
+          <span class="item-price">$12</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Escargots de bourgogne</span>
+          <span class="item-price">$11</span>
+        </div>
+       </div>
+    </div>
+    <div class="middle-row">
+      <div class="middle-top">
+      <div class="items1">
+        <h3 class="mains">MAINS</h3>
+        <div class="menu-item">
+          <span class="item-name">Beef burgundy stew</span>
+          <span class="item-price">$24</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Roast chicken with tarragon</span>
+          <span class="item-price">$21</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Seared scallops</span>
+          <span class="item-price">$26</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Ratatouille</span>
+          <span class="item-price">$18</span>
+        </div>
+      </div>
+      </div>
+      <div class="middle-bottom">
+        <div class="items">
+          <h3 class="desserts">DESSERTS</h3>
+          <div class="menu-item1">
+            <span class="item-name1">sad</span>
+            <span class="item-price1">$9</span>
+            <span class="item-price2">$16</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name1">sad</span>
+            <span class="item-price1">$9</span>
+            <span class="item-price2">$16</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name1">sad</span>
+            <span class="item-price1">$9</span>
+            <span class="item-price2">$16</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name1">sad</span>
+            <span class="item-price1">$9</span>
+            <span class="item-price2">$16</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-row">
+      <div class="drinks-section">
+        <h3>DRINKS</h3>
+        <div class="drinks-items">
+          <div class="menu-item">
+            <span class="item-name">VIN DU JOUR</span>
+            <span class="item-price">$10 PER GLASS | $48 PER BOTTLE</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">FRENCH LONG COFFEE</span>
+            <span class="item-price">$10</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">SPARKLING WATER</span>
+            <span class="item-price">$8</span>
+          </div>
+        </div>
+      </div>
+      <div class="image">
+        <img class="pizza" src="/images/pizza for website.jpg" />
+      </div>
+    </div>
+
+    </div>
+    <script>
+      const menuToggle = document.getElementById('menuToggle');
+      const sidebar = document.getElementById('sidebarMenu');
+
+      menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+      });
+
+      // Close sidebar when clicking outside
+      document.addEventListener('click', (e) => {
+        if(!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+          sidebar.classList.remove('active');
+          document.body.classList.remove('menu-open');
+        }
+      })
+
+
+    </script>
+  </body>
+
+</html>
