@@ -1,75 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LA LUNE FRENCH BISTRO </title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Solway:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LA LUNE FRENCH BISTRO</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Solway:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
 
-  <div class="container">
-    <div class="row top-row">
-      <header class="site-header">
-        <div class="logo-container">
-          <img src="/images/logo.png" alt="LA LUNE Logo">
+  <body>
+    <div class="container">
+      <!-- === TOP SECTION === -->
+      <section class="row top-row">
+        <header class="site-header">
+          <div class="logo-container">
+            <img src="/images/logo.png" alt="LA LUNE Logo" />
+          </div>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/menu.html">Menu</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <p>LA LUNE FRENCH BISTRO</p>
+        <h1>A TASTE OF PARIS</h1>
+        <a href="/contact.html" class="book-button">Dine with us</a>
+      </section>
+
+      <!-- === MIDDLE SECTION === -->
+      <section class="row middle-row">
+        <span>✻</span>
+        <h2>Hours</h2>
+        <ul>
+          <li>Weekdays: 11:00am – 9:00pm</li>
+          <li>Weekends: 11:30am – 10:30pm</li>
+          <li>Closed on public holidays</li>
+        </ul>
+        <span>✻</span>
+      </section>
+
+      <!-- === BOTTOM SECTION === -->
+      <section class="row bottom-row">
+        <div class="menu-header">
+          <h2>FLAVORS OF FRANCE</h2>
+          <a href="/menu.html" class="menu-link">
+            <span>View full menu</span>
+          </a>
         </div>
-        <nav class="main-nav">
-          <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/Menu.html">Menu</a></li>
-            <li><a href="/About.html">About</a></li>
-            <li><a href="/Contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-      <p>LA LUNE FRENCH BISTRO</p>
-      <h1>A TASTE OF PARIS</h1>
-      <button>Dine with us</button>
-    </div>
-    <div class="row middle-row">
-      <span>✻</span>
-      <h2>Hours</h2>
-      <ul>
-        <li>Weekdays: 11:00am - 9:00pm</li>
-        <li>Weekends: 11:30am - 10:30pm</li>
-        <li>Closed on public holidays</li>
-      </ul>
-      <span>✻</span>
-    </div>
-    <div class="row bottom-row">
-      <div class="menu-header">
-        <h2>FLAVORS OF FRANCE</h2>
-        <a href="/menu.html">
-          <span>View</span>
-          <span>full</span>
-          <span>menu</span>
-        </a>
-      </div>
-      <div class="categories">
-        <div class="category">
-          <div class="image-wrapper">
-            <img src="/images/appetizers.jpg" alt="Appetizers">
-            <div class="overlay-text">MOUTHWATERING<br>APPETIZERS</div>
+
+        <div class="categories">
+          <div class="category">
+            <div class="image-wrapper">
+              <img src="/images/appetizers.jpg" alt="Appetizers" />
+              <div class="overlay-text">MOUTHWATERING APPETIZERS</div>
+            </div>
+          </div>
+
+          <div class="category">
+            <div class="image-wrapper">
+              <img src="/images/mains.jpg" alt="Mains" />
+              <div class="overlay-text">WHOLESOME MAINS</div>
+            </div>
+          </div>
+
+          <div class="category">
+            <div class="image-wrapper">
+              <img src="/images/desserts.jpg" alt="Desserts" />
+              <div class="overlay-text">SWEET ENDINGS</div>
+            </div>
           </div>
         </div>
-        <div class="category">
-          <div class="image-wrapper">
-            <img src="/images/mains.jpg" alt="Mains">
-            <div class="overlay-text">WHOLESOME MAINS</div>
-          </div>
-        </div>
-        <div class="category">
-          <div class="image-wrapper">
-            <img src="/images/desserts.jpg" alt="Desserts">
-            <div class="overlay-text">SWEET ENDINGS</div>
-          </div>
-        </div>
-      </div>
-      
+      </section>
     </div>
-  </div>
-</body>
+  </body>
 </html>

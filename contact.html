@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts - LA LUNE FRENCH BISTRO</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="contact.css" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Solway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="nav-logo">LA LUNE</div>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <nav class="sidebar" id="sidebarMenu">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/menu.html">Menu</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+      <section class="top-row">
+        <h1>SEE YOU SOON</h1>
+        <p class="visit-message">VISIT US</p>
+        <p class="location">123 Anywhere St. Any City, ST 12345</p>
+        <p class="stuff">
+          Our restaurant has accessible parking spaces and restrooms.
+        </p>
+        <p class="call">CALL US FOR DELIVERIES & RESERVATIONS</p>
+        <p>123 456-7890</p>
+        <p class="follow">FOLLOW US ON OUR SOCIALS</p>
+        <p class="at">@reallygreatsite</p>
+      </section>
+
+      <section class="bottom-row">
+        <img src="/images/last-pic.png" alt="LA LUNE FRENCH BISTRO" />
+        <div class="overlay-text">LA LUNE FRENCH BISTRO</div>
+      </section>
+    </main>
+
+    <!-- Script -->
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const sidebar = document.getElementById("sidebarMenu");
+
+      menuToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+        document.body.classList.toggle("menu-open");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+          sidebar.classList.remove("active");
+          document.body.classList.remove("menu-open");
+        }
+      });
+    </script>
+  </body>
+</html>
